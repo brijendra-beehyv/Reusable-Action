@@ -1,0 +1,16 @@
+name: Use custom action
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call action
+        uses: ./.github/actions/hello
+        with:
+          name: Brijendra Singh
+

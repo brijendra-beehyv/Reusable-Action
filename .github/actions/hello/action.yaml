@@ -1,0 +1,15 @@
+name: My Custom Action
+description: This prints the params
+
+inputs:
+  name:
+    required: true
+    description: Enter your name
+
+runs:
+  using: "composite"
+  steps:
+    - name: Greet
+      run: echo "Hello ${{ inputs.name }}"
+      shell: bash
+
